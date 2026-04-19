@@ -56,3 +56,28 @@ cd frontend
 npm install
 npm start
 ```
+
+
+---
+
+## Usar docker en cualquier PC
+```bash
+# 1. Clonar el repo
+git clone tu-repo
+
+# 2. Crear su propio .env basado en el ejemplo
+cp .env.example .env
+# (editar .env con sus credenciales)
+
+# 3. Levantar todo
+docker compose up -d
+
+# 4. Ver logs
+docker compose logs -f
+
+# 5. Bajar todo (sin borrar datos)
+docker compose down
+
+# 6. Bajar todo Y borrar la base de datos
+docker compose down -v
+```
